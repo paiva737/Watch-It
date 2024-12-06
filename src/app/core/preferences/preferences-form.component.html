@@ -1,0 +1,70 @@
+<!-- Card do Filme Recomendado -->
+<div *ngIf="recommendedMovie" class="recommended-movie-card">
+  <button class="close-btn" (click)="closeRecommendedMovie()">×</button>
+  <h2>Filme Recomendado</h2>
+  <img
+    *ngIf="recommendedMovie.poster_path"
+    [src]="'https://image.tmdb.org/t/p/w500/' + recommendedMovie.poster_path"
+    [alt]="recommendedMovie.title"
+  />
+  <h3>{{ recommendedMovie.title }}</h3>
+  <p>{{ recommendedMovie.overview }}</p>
+</div>
+
+<!-- Formulário de Preferências -->
+<form [formGroup]="preferencesForm" (ngSubmit)="onSubmit()">
+  <label for="genres">Gêneros</label>
+  <select id="generos" formControlName="genres">
+    <option value="">Selecione</option>
+    <option value="28">Ação</option>
+    <option value="12">Aventura</option>
+    <option value="16">Animação</option>
+    <option value="35">Comédia</option>
+    <option value="80">Crime</option>
+    <option value="99">Documentário</option>
+    <option value="18">Drama</option>
+    <option value="10751">Família</option>
+    <option value="14">Fantasia</option>
+    <option value="36">História</option>
+    <option value="27">Terror</option>
+    <option value="10402">Música</option>
+    <option value="9648">Mistério</option>
+    <option value="10749">Romance</option>
+    <option value="878">Ficção Científica</option>
+    <option value="10770">Cinema TV</option>
+    <option value="53">Thriller</option>
+    <option value="10752">Guerra</option>
+    <option value="37">Faroeste</option>
+  </select>
+
+  <label for="duration">Duração (em minutos)</label>
+  <select id="duration" formControlName="duration">
+    <option value="">Selecione</option>
+    <option value="menos-90">Menos de 90 minutos</option>
+    <option value="90-120">Entre 90 e 120 minutos</option>
+    <option value="120-150">Entre 120 e 150 minutos</option>
+    <option value="mais-150">Mais de 150 minutos</option>
+  </select>
+
+  <label for="ageGroup">Faixa Etária</label>
+  <select id="ageGroup" formControlName="ageGroup">
+    <option value="">Selecione</option>
+    <option value="infantil">Infantil</option>
+    <option value="adulto">Adulto</option>
+  </select>
+
+  <label for="actorsDirectors">Atores Preferidos</label>
+  <input id="actorsDirectors" formControlName="actorsDirectors" placeholder="Ex.: Tom Hardy" />
+
+  <label for="platforms">Plataforma de Streaming</label>
+  <select id="platforms" formControlName="platforms">
+    <option value="">Selecione</option>
+    <option value="netflix">Netflix</option>
+    <option value="primeVideo">Prime Video</option>
+    <option value="disneyPlus">Disney+</option>
+    <option value="hboMax">HBO Max</option>
+    <option value="outros">Outros</option>
+  </select>
+
+  <button type="submit">Salvar Preferências</button>
+</form>

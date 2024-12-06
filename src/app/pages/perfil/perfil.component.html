@@ -1,0 +1,10 @@
+<div class="perfil-container">
+  <app-form-base
+    [formGroup]="formGroup"
+    [titulo]="titulo"
+    [textoBotao]="textoBotao"
+    [perfilComponent]="perfilComponent"
+    (acaoClique)="atualizar()"
+    (sair)="deslogar()">
+  </app-form-base>
+</div>
