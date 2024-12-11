@@ -18,12 +18,12 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/api/auth", authRoutes); // Rotas de autenticação
+app.use("/movies", movieRoutes); // Rotas de filmes
 // Middleware de erro personalizado
 app.use(errorHandler);
 
-// Rotas organizadas
-app.use("/api/auth", authRoutes); // Rotas de autenticação
-app.use("/movies", movieRoutes); // Rotas de filmes
+
 
 // Conexão com o MongoDB
 mongoose
