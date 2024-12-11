@@ -1,4 +1,5 @@
 export const environment = {
-    production: false,
-    apiUrl: 'http://localhost:8080'  
-};
+    production: true,
+    apiUrl: 'https://watch-it-sage.vercel.app/api', // URL do backend no deploy
+  };
+  
