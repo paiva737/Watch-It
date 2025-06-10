@@ -41,6 +41,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Esse é um projeto da qual eu realizei para apresentação do meu TCC na faculdade, muito feliz do resultado final desse projeto.
 
+Ele possui tela de Login, tela de cadastro, Menu do site, Menu dos filmes, aba para adicionar suas preferências entre outras abas para navegar dentro do site.
+
 
 
 Feito com ♥ by Rafael Paiva :wave:
